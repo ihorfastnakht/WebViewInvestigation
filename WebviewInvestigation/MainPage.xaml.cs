@@ -88,6 +88,7 @@ namespace WebviewInvestigation
                 try
                 {
                     webview.Visibility = Visibility.Visible;
+                    Debug.WriteLine(webview?.DocumentTitle);
                 }
                 catch (Exception ex)
                 {
