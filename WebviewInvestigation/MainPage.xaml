@@ -1,0 +1,51 @@
+﻿<Page
+    x:Class="WebviewInvestigation.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:WebviewInvestigation"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    mc:Ignorable="d">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Text="Webview rescue approach" />
+
+            <StackPanel Grid.Row="1" Orientation="Horizontal">
+
+                <RadioButton
+                    x:Name="rb1"
+                    Margin="0,0,10,0"
+                    Checked="RbChecked"
+                    Content="Separate process lost event handler"
+                    GroupName="RescueGroup"
+                    IsChecked="True" />
+
+                <RadioButton
+                    x:Name="rb2"
+                    Checked="RbChecked"
+                    Content="Timer checker (10 seconds interval)"
+                    GroupName="RescueGroup" />
+
+            </StackPanel>
+
+        </Grid>
+
+        <Grid
+            x:Name="Root"
+            Grid.Row="1"
+            Margin="10" />
+    </Grid>
+
+</Page>
